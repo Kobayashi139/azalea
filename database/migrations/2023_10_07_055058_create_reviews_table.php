@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('store_name');
             $table->string('body');
             $table->createed_at();
-            $table->created_at();
+            $table->updated_at();
             $table->timestamps();
         });
     }
