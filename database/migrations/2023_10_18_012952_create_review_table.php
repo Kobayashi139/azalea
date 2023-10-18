@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('review', function (Blueprint $table) {
             $table->id();
+            $table->string('store_name');
+            $table->string('body');
+            $table->createed_at();
+            $table->updated_at();
             $table->timestamps();
         });
     }
