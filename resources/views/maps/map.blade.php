@@ -17,7 +17,7 @@
         </form>
         
         <script src="{{ asset('/js/map.js') }}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQcallback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>
         
     </body>
 </html>

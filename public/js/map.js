@@ -1,7 +1,7 @@
 const inputAddress = document.getElementById("address");
 const button = document.getElementById("button");
 button.onclick = initMap;
-
+console.log("HEllo");
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15, // 地図の尺度

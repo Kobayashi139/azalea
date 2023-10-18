@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+         Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->string('store_name');
-            $table->string('body');
-            $table->createed_at();
-            $table->updated_at();
+            $table->string('name');
+            $table->string('email')->unique(); // unique:アドレスの重複を避ける
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken(); // パスワードリセット
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('user');
     }
 };
