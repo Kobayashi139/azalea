@@ -1,4 +1,4 @@
-//map を表示するためのファイル
+//map を表示するためのファイルです
 const inputAddress = document.getElementById("address");
 const button = document.getElementById("button");
 button.onclick = initMap;
