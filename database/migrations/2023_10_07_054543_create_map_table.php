@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('map', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            #map 
         });
     }
 
