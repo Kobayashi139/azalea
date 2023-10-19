@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/maps/map');
+   // return view('/maps/map');
+    return view('/maps/map_search');
     return view('welcome');
 });
 
