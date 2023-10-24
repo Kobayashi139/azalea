@@ -19,5 +19,14 @@
         <script src="{{ asset('/js/map.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>
         
+        <h1>Review List</h1>
+        <div class ='posts'>
+            @foreach ($posts as $post)
+                <div class='post'>
+                    <h2 class='title'>Title</h2>
+                    <p class='body'>This is a sample body</p>
+                </div>
+            @endforeach
+        </div>
     </body>
 </html>
