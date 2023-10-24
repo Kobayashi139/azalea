@@ -17,9 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('store_name');
             $table->string('body');
-            $table->createed_at();
-            $table->updated_at();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
