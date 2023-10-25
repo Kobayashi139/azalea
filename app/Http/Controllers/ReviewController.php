@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Review;
 
 class ReviewController extends Controller
 {
@@ -30,5 +31,9 @@ class ReviewController extends Controller
         $restaurants = $data->results;
     
         return view('/maps/map_search', compact('restaurants'));
+    }
+    public function review(Review $review){
+        return view('maps.map')->with(['reviews' => $review->get()]);
+       
     }
 }

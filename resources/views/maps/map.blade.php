@@ -20,11 +20,11 @@
         <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>
         
         <h1>Review List</h1>
-        <div class ='posts'>
-            @foreach ($posts as $post)
+        <div class ='reviews'>
+            @foreach ($reviews as $review)
                 <div class='post'>
-                    <h2 class='title'>Title</h2>
-                    <p class='body'>This is a sample body</p>
+                    <h2 class='title'>{{ $review->title }}</h2>
+                    <p class='body'>{{ $review->body }}</p>
                 </div>
             @endforeach
         </div>

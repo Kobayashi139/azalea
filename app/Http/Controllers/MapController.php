@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ReviewController extends Controller
+class MapController extends Controller
 {
     public function index(Post $post){
         return view('maps.map')->with(['posts' => $post->getByLimit()]);
