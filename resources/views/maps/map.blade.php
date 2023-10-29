@@ -23,7 +23,9 @@
         <div class ='reviews'>
             @foreach ($reviews as $review)
                 <div class='post'>
-                    <h2 class='title'>{{ $review->title }}</h2>
+                    <h2 class='title'>
+                        <a href="/reviews/{{ $review->id }}">{{ $review->title }}</a>
+                    </h2>
                     <p class='body'>{{ $review->body }}</p>
                 </div>
             @endforeach
