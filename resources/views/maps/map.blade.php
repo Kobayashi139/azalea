@@ -24,9 +24,9 @@
             @foreach ($reviews as $review)
                 <div class='post'>
                     <h2 class='title'>
-                        <a href="/reviews/{{ $review->id }}">{{ $review->title }}</a>
+                        <a href="/reviews/{{ $review->title }}">{{ $review->store_name }}</a>
+                        <!-- データベース内のstore_nameを表示-->
                     </h2>
-                    <p class='body'>{{ $review->body }}</p>
                 </div>
             @endforeach
         </div>
