@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="{{ str_replace( '_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -24,11 +24,13 @@
             @foreach ($reviews as $review)
                 <div class='post'>
                     <h2 class='title'>
-                        <a href="/reviews/{{ $review->title }}">{{ $review->store_name }}</a>
+                        <a href="/maps/map_show{{ $review->title }}">{{ $review->store_name }}</a>
                         <!-- データベース内のstore_nameを表示-->
                     </h2>
                 </div>
             @endforeach
         </div>
+        
+        <a href='/maps/map_create'>レビューの作成</a>
     </body>
 </html>

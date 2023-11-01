@@ -39,6 +39,11 @@ class ReviewController extends Controller
     
     public function show(Review $review)
     {
-        return view('maps.map_show')->with(['review' => $review->get()]);
+        return view('/maps/map_show')->with(['reviews' => $review->get()]);
+    }
+    
+    public function create()
+    {
+        return view('/maps/map_create');
     }
 }
