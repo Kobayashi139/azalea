@@ -24,8 +24,8 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     //Route::get('/index', [ReviewController::class, 'index'])->name('review.index');
     Route::get('/', [ReviewController::class, 'review'])->name('maps.map');
-    Route::get('/maps/map_create',[ReviewController::class, 'create']);
-    Route::get('/maps/map_show/{review}',[ReviewController::class , 'show']);
+    Route::get('/maps/create',[ReviewController::class, 'create']);
+    Route::get('/maps/show/{review}',[ReviewController::class , 'show']);
     Route::post('/search', [ReviewController::class, 'search'])->name('review.search');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
