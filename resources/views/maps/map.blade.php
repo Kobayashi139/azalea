@@ -24,13 +24,13 @@
             @foreach ($reviews as $review)
                 <div class='post'>
                     <h2 class='title'>
-                        <a href="/maps/map_show{{ $review->title }}">{{ $review->store_name }}</a>
+                        <a href="/maps/show/{{ $review->id }}">{{ $review->store_name }}</a>
                         <!-- データベース内のstore_nameを表示-->
                     </h2>
                 </div>
             @endforeach
         </div>
         
-        <a href='/maps/map_create'>レビューの作成</a>
+        <a href='/maps/create'>レビューの作成</a>
     </body>
 </html>

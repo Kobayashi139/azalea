@@ -30,7 +30,7 @@ class ReviewController extends Controller
         // 取得した飲食店情報をビューに渡す
         $restaurants = $data->results;
     
-        return view('/maps/map_search', compact('restaurants'));
+        return view('maps.map_search', compact('restaurants'));
     }
     public function review(Review $review){
         return view('maps.map')->with(['reviews' => $review->get()]);
@@ -39,11 +39,11 @@ class ReviewController extends Controller
     
     public function show(Review $review)
     {
-        return view('/maps/map_show')->with(['reviews' => $review->get()]);
+        return view('maps.show')->with(['review' => $review]);
     }
     
     public function create()
     {
-        return view('/maps/map_create');
+        return view('maps.create');
     }
 }
