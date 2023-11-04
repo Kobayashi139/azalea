@@ -32,9 +32,9 @@ class ReviewController extends Controller
     
         return view('maps.map_search', compact('restaurants'));
     }
-    public function review(Review $review){
+    public function review(Review $review)
+    {
         return view('maps.map')->with(['reviews' => $review->get()]);
-       
     }
     
     public function show(Review $review)
@@ -45,5 +45,13 @@ class ReviewController extends Controller
     public function create()
     {
         return view('maps.create');
+    }
+    
+    public function store(Review $review, ReviewRequest $request)
+    {
+        dd($request->all());
+        $input = $request['review'];
+        $review->fill($input) >save();
+        return redirect('/maps/'. $review->id);
     }
 }
