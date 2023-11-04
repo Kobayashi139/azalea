@@ -15,13 +15,15 @@
             @csrf
             <div class="title">
                 <h2>店名</h2>
-                <input type="text" name"review[title]" placeholder="お店の名前"/>
+                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ old('review.title') }}"/>
+                <p class="title_error" style="color:red">{{ $errors->first('review.title') }}</p>
             </div>
             <div class="body">
                 <h2>評価</h2>
-                <textarea name="review[body]" placeholder="お店の感想"></textarea>
+                <textarea name="review[body]" placeholder="お店の感想">{{ old('review.body') }}</textarea>
+                <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
             </div>
-            <input type="submit" value="store"/>
+            <input type="submit" value="保存"/>
         </from>
             <div class="footer">
                 <a href="/">戻る</a>
