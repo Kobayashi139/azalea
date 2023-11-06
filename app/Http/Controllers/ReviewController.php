@@ -50,9 +50,21 @@ class ReviewController extends Controller
     
     public function store(Review $review, ReviewRequest $request)
     {
-       // dd($request);
        $input = $request['review'];
        $review->fill($input)->save();
-        return redirect('/');
+       return redirect('/');
     }
+    
+    public function edit(Review $review)
+    {
+        return view('maps.edit')->with(['review' => $review]);
+    }
+    
+    public function update(ReviewRequest $request, Review $review)
+    {
+        $input_review = $request['review'];
+        $reveiw->fill($input_review)->save();
+        return redirect('/reviews/ . $review->id');
+    }
+
 }

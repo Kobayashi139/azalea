@@ -13,7 +13,7 @@ class ReviewRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return true; //レビュー投稿を保存するためtrueに変更。
     }
 
     /**

@@ -27,6 +27,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/maps/create',[ReviewController::class, 'create']);
     Route::get('/maps/show/{review}',[ReviewController::class , 'show']);
     Route::post('/reviews',[ReviewController::class, 'store']);
+    Route::get('/reviews/{review}/edit',[ReviewController::class, 'edit']);
+    Route::put('/reviews/{review}',[ReviewController::class, 'update']);
+    
     Route::post('/search', [ReviewController::class, 'search'])->name('review.search');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

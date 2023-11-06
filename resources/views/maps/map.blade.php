@@ -23,7 +23,7 @@
         <div class ='reviews'>
             @foreach ($reviews as $review)
                 <div class='review'>
-                    <h2 class='title'>
+                    <h2 class='store_name'>
                         <a href="/maps/show/{{ $review->id }}">{{ $review->store_name }}</a>
                         <!-- データベース内のstore_nameを表示-->
                     </h2>

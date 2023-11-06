@@ -18,6 +18,7 @@
                 <h3>評価</h3>
                 <p>{{ $review->body }}</p>
             </div>
+            <div class="edit"><a href="/reviews/{{ $review->id }}/edit">投稿を編集</a></div>
             <div class="footer">
                 <a href="/">戻る</a>
             </div>
