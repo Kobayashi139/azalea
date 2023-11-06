@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Review;
+use App\Http\Requests\ReviewRequest;
 
 class ReviewController extends Controller
 {
@@ -49,9 +50,9 @@ class ReviewController extends Controller
     
     public function store(Review $review, ReviewRequest $request)
     {
-        dd($request->all());
-        $input = $request['review'];
-        $review->fill($input) >save();
-        return redirect('/maps/'. $review->id);
+       // dd($request);
+       $input = $request['review'];
+       $review->fill($input)->save();
+        return redirect('/');
     }
 }
