@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Review;
+use App\Http\Requests\ReviewRequest;
 
 class ReviewController extends Controller
 {
@@ -42,16 +43,28 @@ class ReviewController extends Controller
         return view('maps.show')->with(['review' => $review]);
     }
     
-    public function create()
+    public function create($name)
     {
-        return view('maps.create');
+        return view('maps.create')->with(['name' => $name]);
     }
     
     public function store(Review $review, ReviewRequest $request)
     {
-        dd($request->all());
-        $input = $request['review'];
-        $review->fill($input) >save();
-        return redirect('/maps/'. $review->id);
+       $input = $request['review'];
+       $review->fill($input)->save();
+       return redirect('/');
     }
+    
+    public function edit(Review $review)
+    {
+        return view('maps.edit')->with(['review' => $review]);
+    }
+    
+    public function update(ReviewRequest $request, Review $review)
+    {
+        $input_review = $request['review'];
+        $review->fill($input_review)->save();
+        return redirect('/maps/show/' . $review->id);
+    }
+
 }

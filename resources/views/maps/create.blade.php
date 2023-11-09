@@ -11,12 +11,12 @@
     
     <body>
         <h1>レビュー作成</h1>
-        <from action="/reviews" method="POST">
+        <form action="/reviews" method="POST">
             @csrf
-            <div class="title">
+            <div class="store_name">
                 <h2>店名</h2>
-                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ old('review.title') }}"/>
-                <p class="title_error" style="color:red">{{ $errors->first('review.title') }}</p>
+                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ $name }}"/> 
+                <p class="title_error" style="color:red">{{ $errors->first('review.store_name') }}</p>
             </div>
             <div class="body">
                 <h2>評価</h2>

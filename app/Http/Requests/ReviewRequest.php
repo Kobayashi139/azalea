@@ -13,7 +13,7 @@ class ReviewRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true; //レビュー投稿を保存するためtrueに変更。
     }
 
     /**
@@ -24,7 +24,7 @@ class ReviewRequest extends FormRequest
     public function rules()
     {
         return [
-            'review.title' => 'required|string|max:100',
+            'review.store_name' => 'required|string|max:100',
             'review.body' => 'required|string|max:500',
             //
         ];
