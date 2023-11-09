@@ -43,9 +43,9 @@ class ReviewController extends Controller
         return view('maps.show')->with(['review' => $review]);
     }
     
-    public function create()
+    public function create($name)
     {
-        return view('maps.create');
+        return view('maps.create')->with(['name' => $name]);
     }
     
     public function store(Review $review, ReviewRequest $request)
@@ -63,8 +63,8 @@ class ReviewController extends Controller
     public function update(ReviewRequest $request, Review $review)
     {
         $input_review = $request['review'];
-        $reveiw->fill($input_review)->save();
-        return redirect('/reviews/ . $review->id');
+        $review->fill($input_review)->save();
+        return redirect('/maps/show/' . $review->id);
     }
 
 }

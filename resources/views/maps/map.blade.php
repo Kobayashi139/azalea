@@ -11,14 +11,17 @@
     <body class="antialiased">
         <div id="map" style="height:500px; width:800px;"></div>
         
-        <form>
+        
             <input type="text" name="adress" value="東京都墨田区押上1丁目1-2" id="address">
-            <button type="button" id="button">検索</button>
-        </form>
+            <button type="button" id="search">検索</button>
         
-        <script src="{{ asset('/js/map.js') }}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>
-        
+        <div id="lat"></div>
+            <div id="lng"></div>
+        <script src="{{ asset('/js/map_search.js') }}"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>-->
+        <div id="restaurants">
+                
+            </div>
         <h1>Review List</h1>
         <div class ='reviews'>
             @foreach ($reviews as $review)
@@ -31,6 +34,7 @@
             @endforeach
         </div>
         
-        <a href='/maps/create'>レビューの作成</a>
+
     </body>
+    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&libraries=places&callback=initMap" async defer></script>
 </html>

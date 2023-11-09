@@ -10,10 +10,9 @@
     </head>
     
     <body>
-        
         <h1 class="title">編集画面</h1>
         <div class ='content'>
-            <from action ="/reviews/{{ $review->id }}" method="POST">
+            <form action="/reviews/{{ $review->id }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="store_name">
@@ -27,7 +26,7 @@
                     <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
                 </div>
                 <input type="submit" value="保存"/>
-            </from>
+            </form>
             <div class="footer">
                 <a href="/">戻る</a>
             </div>

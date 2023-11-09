@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     //Route::get('/index', [ReviewController::class, 'index'])->name('review.index');
     Route::get('/', [ReviewController::class, 'review'])->name('maps.map');
-    Route::get('/maps/create',[ReviewController::class, 'create']);
+    Route::get('/reviews/create/{name}',[ReviewController::class, 'create']);
     Route::get('/maps/show/{review}',[ReviewController::class , 'show']);
     Route::post('/reviews',[ReviewController::class, 'store']);
     Route::get('/reviews/{review}/edit',[ReviewController::class, 'edit']);

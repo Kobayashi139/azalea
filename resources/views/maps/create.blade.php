@@ -15,7 +15,7 @@
             @csrf
             <div class="store_name">
                 <h2>店名</h2>
-                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ old('review.store_name') }}"/> 
+                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ $name }}"/> 
                 <p class="title_error" style="color:red">{{ $errors->first('review.store_name') }}</p>
             </div>
             <div class="body">
