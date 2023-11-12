@@ -48,7 +48,6 @@ class ReviewController extends Controller
         return view('maps.create')->with(['name' => $name ,'reviews' => $review->get()]);
     }
     
-    
     public function store(Review $review, ReviewRequest $request)
     {
        $input = $request['review'];
