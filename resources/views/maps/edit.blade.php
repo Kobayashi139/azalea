@@ -29,6 +29,7 @@
             </form>
             <div class="footer">
                 <a href="/">戻る</a>
+                 <!-- /で一番初めの画面に戻るため、変更したい-->
             </div>
         </div>
     </body>

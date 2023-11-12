@@ -84,7 +84,7 @@ function searchNearbyRestaurants(lat, lng) {
             var restaurantList = '<h2>Nearby Restaurants:</h2><ul>';
             for (var i = 0; i < results.length; i++) {
                 var restaurant = results[i];
-                restaurantList += '<a href="/reviews/create/' + restaurant.name + '" >' + restaurant.name + '</a>';
+                restaurantList += '<a href="/reviews/create/' + restaurant.name + '" >' + restaurant.name + '</a><br>';
                 // 飲食店のリストを表示
             }
             restaurantList += '</ul>';

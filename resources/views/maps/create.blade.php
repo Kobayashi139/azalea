@@ -10,12 +10,28 @@
     </head>
     
     <body>
+        
+        <h1>みんなの声</h1>
+        <div class ='reviews'>
+            @foreach ($reviews as $review)
+                @if ($review->store_name  === $name)
+                <div class='review'>
+                    <h2 class='store_name'>
+                        <a href="/maps/show/{{ $review->id }}">{{ $review->body}}</a>
+                        <!-- データベース内のstore_nameを表示-->
+                    </h2>
+                </div>
+                @endif
+            @endforeach
+
+        </div>
+        
         <h1>レビュー作成</h1>
         <form action="/reviews" method="POST">
             @csrf
             <div class="store_name">
                 <h2>店名</h2>
-                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ $name }}"/> 
+                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ $name }}" readonly/> 
                 <p class="title_error" style="color:red">{{ $errors->first('review.store_name') }}</p>
             </div>
             <div class="body">
