@@ -1,15 +1,6 @@
-<!DOCTYPE HTML>
-<html lang="{{ str_replace( '_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Map</title>
-        <!-- Fonts -->
-        <link href ="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        
-    </head>
-    
-    <body class="antialiased">
-        <div id="map" style="height:500px; width:800px;"></div>
+<x-app-layout>
+
+        <div id="map" style="height:0px; width:0px;"></div>
         
         
             <input type="text" name="adress" value="東京都墨田区" id="address">
@@ -35,6 +26,5 @@
         </div>
         
 
-    </body>
     <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&libraries=places&callback=initMap" async defer></script>
-</html>
+</x-app-layout>
