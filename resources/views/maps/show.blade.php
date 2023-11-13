@@ -21,6 +21,7 @@
             <div class="edit"><a href="/reviews/{{ $review->id }}/edit">投稿を編集</a></div>
             <div class="footer">
                 <a href="/">戻る</a>
+                <a href="/reviews/create/{{ $review->store_name }}">戻る</a>
                 <!-- /で一番初めの画面に戻るため、変更したい-->
             </div>
         </div>
