@@ -12,7 +12,7 @@
         <div id="map" style="height:500px; width:800px;"></div>
         
         
-            <input type="text" name="adress" value="東京都墨田区押上1丁目1-2" id="address">
+            <input type="text" name="adress" value="東京都墨田区" id="address">
             <button type="button" id="search">検索</button>
         
         <div id="lat"></div>
