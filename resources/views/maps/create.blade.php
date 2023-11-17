@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace( '_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Review</title>
-        <!-- Fonts -->
-        <link href ="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        
-    </head>
-    
-    <!--<body>-->
+<x-app-layout>
     <body class="antialiased">
         <h1>{{ $name }}</h1>
         <div id="map" style="height:300px; width:500px;"></div>
@@ -51,11 +40,13 @@
                 <textarea name="review[body]" placeholder="お店の感想">{{ old('review.body') }}</textarea>
                 <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
             </div>
-            <input type="submit" value="保存"/>
+            <input type="submit" value="保存" />
+            <!--保存と同時にこの画面に推移する方法がわからない、初めに戻ってしまう-->
         </from>
+        
             <div class="footer">
-                <a href="/">戻る</a>
+               <a href="/">戻る</a>
             </div>
         </div>
     </body>
-</html>
+</x-app-layout>
