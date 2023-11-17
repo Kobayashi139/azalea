@@ -1,14 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="{{ str_replace( '_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Map</title>
-        <!-- Fonts -->
-        <link href ="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        
-    </head>
-    
+<x-app-layout>
     <body>
         <h1 class="title">編集画面</h1>
         <div class ='content'>
@@ -28,9 +18,8 @@
                 <input type="submit" value="保存"/>
             </form>
             <div class="footer">
-                <a href="/">戻る</a>
-                 <!-- /で一番初めの画面に戻るため、変更したい-->
+                <a href="/review/create/{{ $review->store_name }}">戻る</a>
             </div>
         </div>
     </body>
-</html>
+</x-app-layout>
