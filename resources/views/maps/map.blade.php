@@ -1,10 +1,8 @@
 <x-app-layout>
 
-        <div id="map" style="height:0px; width:0px;"></div>
-        
-        
-            <input type="text" name="adress" value="東京都墨田区" id="address">
-            <button type="button" id="search">検索</button>
+    <div id="map"></div>
+    <input type="text" name="adress" value="東京都墨田区" id="address">
+    <button type="button" id="search">検索</button>
         
         <div id="lat"></div>
             <div id="lng"></div>
