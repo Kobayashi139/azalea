@@ -9,8 +9,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-       <link href ="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -20,6 +19,7 @@
 
             <!-- Page Heading -->
             @if (isset($header))
+            <!--isset関数とは、引数に指定した変数に値が設定されている、かつNULLではない場合には正の値を戻り値とする-->
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
@@ -29,7 +29,12 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="text-center text-gray-900"> 
+                <div style="">
+                    {{ $slot }}
+                </div>
+                
+                </div>
             </main>
         </div>
     </body>
