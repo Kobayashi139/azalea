@@ -29,11 +29,15 @@
 
             <!-- Page Content -->
             <main>
-                <div class="text-center text-gray-900"> 
                 <div style="">
+                    <div class="text-center text-gray-500"> 
                     {{ $slot }}
+                    </div>
                 </div>
-                
+                <div style="text-2">
+                    <div class="text-center text-gray-200">
+                    {{ $text2 }}
+                    </div>
                 </div>
             </main>
         </div>
