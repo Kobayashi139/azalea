@@ -28,17 +28,18 @@
             @endif
 
             <!-- Page Content -->
+            
             <main>
                 <div style="">
                     <div class="text-center text-gray-500"> 
                     {{ $slot }}
                     </div>
                 </div>
-                <div style="text-2">
-                    <div class="text-center text-gray-200">
-                    {{ $text2 }}
-                    </div>
-                </div>
+                <!--<div style="text-2">-->
+                <!--    <div class="text-center text-gray-200">-->
+                    
+                <!--    </div>-->
+                <!--</div>-->
             </main>
         </div>
     </body>
