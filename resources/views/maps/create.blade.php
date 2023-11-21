@@ -12,7 +12,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>
         <div id="restaurants">
      
-        <h2>みんなの声</h2>
+        <x-slot name="text-2"><h2>みんなの声</h2></x-slot>
         <div class ='reviews'>
             @foreach ($reviews as $review)
                 @if ($review->store_name  === $name)
