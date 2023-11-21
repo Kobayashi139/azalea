@@ -30,7 +30,6 @@
             <!-- Page Content -->
             
             <main>
-                <!--nazo-->
                 <div style="">
                     <div class="text-center text-gray-500"> 
                     {{ $slot }}
