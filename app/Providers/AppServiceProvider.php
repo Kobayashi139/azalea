@@ -23,7 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \URL::forceScheme('https');
+        if (\App::environment('production')) {
+            \URL::forceScheme('https');
+        }
+        // \URL::forceScheme('https');
         //laravelのURLをhttps化する
         $this->app['request']->server->set('HTTPS','on');
         //ペジネーションに対応
