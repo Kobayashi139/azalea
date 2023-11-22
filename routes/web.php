@@ -22,7 +22,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    //Route::get('/index', [ReviewController::class, 'index'])->name('review.index');
+    //Route::get('/index', [ReviewController::class, 'index'])->name('review.index');aaaa
     Route::get('/', [ReviewController::class, 'review'])->name('maps.map');
     Route::get('/reviews/create/{name}',[ReviewController::class, 'create']);
     Route::get('/maps/show/{review}',[ReviewController::class , 'show']);
