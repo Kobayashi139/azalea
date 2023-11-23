@@ -48,11 +48,12 @@ class ReviewController extends Controller
         return view('maps.create')->with(['name' => $name ,'reviews' => $review->get()]);
     }
     
-    public function store(Review $review, ReviewRequest $request)
+    public function store( Review $review, ReviewRequest $request)
     {
+        $url = url()->previous();
        $input = $request['review'];
        $review->fill($input)->save();
-       return redirect('/');
+       return redirect($url);
     }
     
     public function edit(Review $review)

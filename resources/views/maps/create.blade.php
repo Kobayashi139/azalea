@@ -26,7 +26,6 @@
             @endforeach
 
         </div>
-        
         <h3>レビュー作成</h3>
         <form action="/reviews" method="POST">
             @csrf
@@ -41,7 +40,7 @@
                 <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
             </div>
             <input type="submit" value="保存" />
-            <!--保存と同時にこの画面に推移する方法がわからない、初めに戻ってしまう-->
+            <!--保存と同時に画面が移動する原因がわからない、"/"に戻ってしまう-->
         </from>
         
             <div class="footer">
