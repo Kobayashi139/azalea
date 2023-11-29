@@ -1,16 +1,126 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: Verdana, sans-serif;
+
+/*表示しない*/
+.hidden{
+  display: none;
 }
 
-.container {
-  width: 600px;
+/*map.bladeのスタイル*/
+#headline{
+  color: #333399;
+  text-align: center;
+  font-weight: bold;
+}
+/*#headline h1{*/
+/*  font-size: 200%;*/
+/*  margin-top: 20px;*/
+/*  margin-bottom: 5px;*/
+/*}*/
+
+#search{
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #333399; /* ボタンの背景色 */
+  color: white; /* ボタンのテキスト色 */
+  padding: 0.7% 0.8%; /* ボタンの内側の余白 */
+  border: none; /*ボタンの枠線をなくす*/
+  border-radius: 5px; /* ボタンの角を丸くする */
+  cursor: pointer; /* マウスカーソルをポインターに変更 */
+}
+#search:hover {
+  text-decoration: underline;
+  background-color: #4b4bad; /* ボタンのホバー時の背景色 */
+}
+
+#address {
+  font-size: 130%; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 1%; /* 入力フィールドの内側の余白 */
+  border: 1px solid #ccc; /* 入力フィールドの枠線 */
+  border-radius: 5px; /* 入力フィールドの角を丸くする */
+}
+
+#address:focus{
+  outline: none; /* フォーカス時のアウトラインをなくす */
+  border-color: #4CAF50; /* フォーカス時の枠線の色 */
+}
+
+/*maps.create.bladeのスタイル*/
+#map{
+  margin:0 auto;
+  text-align-last: center;
+  width: 70vw; /* 画面の幅設定 */
+  height: 35vh; /* 画面の高さ設定 */
+}
+
+.antialiased{
+  margin:0 auto;
+  color: #333399;
+  text-align: center;
+  font-weight: bold;
+}
+
+.antialiased h1{
   margin: 0 auto;
+  text-align: center; 
+  border-radius: 15px;
+  font-size: 140%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: #333399; 
+  color: white;
+  width: 50%;
+  padding: 13px 0;
+  font-weight: bold;
+
 }
 
-h2 {
-    font-size: 200%;
-    color: #364e96;
+/*map.search.jsのスタイル*/
+#restaurant
+{
+  margin: 0 auto; /* 左右の余白を自動で調整して中央に配置 */
+  text-align: center; /* コンテンツを中央揃え */
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
 }
+
+#restaurants h4 {
+  margin: 0 auto;
+  text-align: center; 
+  border-radius: 15px;
+  font-size: 140%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: skyblue;
+  color: white;
+  width: 35%;
+  padding: 13px 0;
+  font-weight: bold;
+}
+
+#restaurants ul {
+  margin: 0 auto;
+  text-align: center; 
+  list-style: none;
+  padding: 0;
+}
+
+#restaurants a {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 110%;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333399 ; /* リンクの色を設定 */
+  font-weight: bold;
+}
+
+#restaurants a:hover {
+  text-decoration: underline;
+}
+

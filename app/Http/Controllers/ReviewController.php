@@ -52,7 +52,7 @@ class ReviewController extends Controller
     {
         $url = url()->previous();
        $input = $request['review'];
-       $review->fill($input)->save();
+       $review->fill($input)->save(); //前回取得したURLをもう一度表示する
        return redirect($url);
     }
     

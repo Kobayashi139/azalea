@@ -35,15 +35,10 @@
             <main>
                 <!--nazo-->
                 <div style="">
-                    <div class="text-center text-gray-500"> 
+                    <!--<div class="text-center"> -->
                     {{ $slot }}
                     </div>
                 </div>
-                <!--<div style="text-2">-->
-                <!--    <div class="text-center text-gray-200">-->
-                    
-                <!--    </div>-->
-                <!--</div>-->
             </main>
         </div>
     </body>
