@@ -1,6 +1,6 @@
 <x-app-layout>
     <body>
-        <h1 class="title">編集画面</h1>
+        <h1 class="title">レビューの編集</h1>
         <div class ='content'>
             <form action="/reviews/{{ $review->id }}" method="POST">
                 @csrf
@@ -15,9 +15,12 @@
                     <textarea name="review[body]" placeholder="お店の感想">{{ $review->body}}</textarea>
                     <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
                 </div>
-                <input type="submit" value="保存"/>
+                <div class="sibmit2">
+                    <input type="submit" value="保存"/>
+                </div>
             </form>
             <div class="footer">
+                <!--今なんか戻れない-->
                 <a href="/review/create/{{ $review->store_name }}">戻る</a>
             </div>
         </div>

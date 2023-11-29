@@ -10,13 +10,8 @@
   text-align: center;
   font-weight: bold;
 }
-/*#headline h1{*/
-/*  font-size: 200%;*/
-/*  margin-top: 20px;*/
-/*  margin-bottom: 5px;*/
-/*}*/
 
-#search{
+.address_search button{
   font-size: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -27,12 +22,13 @@
   border-radius: 5px; /* ボタンの角を丸くする */
   cursor: pointer; /* マウスカーソルをポインターに変更 */
 }
-#search:hover {
+
+.address_search button:hover {
   text-decoration: underline;
   background-color: #4b4bad; /* ボタンのホバー時の背景色 */
 }
 
-#address {
+.address_search input[type="text"] {
   font-size: 130%; 
   margin-top: 10px;
   margin-bottom: 10px;
@@ -41,10 +37,11 @@
   border-radius: 5px; /* 入力フィールドの角を丸くする */
 }
 
-#address:focus{
+.address_search input[type="text"]:focus{
   outline: none; /* フォーカス時のアウトラインをなくす */
   border-color: #4CAF50; /* フォーカス時の枠線の色 */
 }
+
 
 /*maps.create.bladeのスタイル*/
 #map{
@@ -52,6 +49,13 @@
   text-align-last: center;
   width: 70vw; /* 画面の幅設定 */
   height: 35vh; /* 画面の高さ設定 */
+}
+
+.title1 h2, .title2 h3{
+  font-size: 150%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .antialiased{
@@ -73,23 +77,123 @@
   width: 50%;
   padding: 13px 0;
   font-weight: bold;
+}
 
+.review a{
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 110%;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #333399;
+  color: white;
+  width: 35%;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.review a:hover {
+  outline: none;
+  background-color: #4CAF50; 
+}
+
+/*レビュー投稿スタイル*/
+.reviewpost {
+  padding: 20px; 
+  border-radius: 5px; 
+}
+
+.body h3, .content h3, .body h2, .store_name h2{
+  font-size: 120%;
+  margin-bottom: 13px
+}
+
+.body textarea,
+.reviewpost input[type="submit"] {
+  margin-bottom: 10px;
+  width: 80%; 
+  padding: 8px; 
+  font-size: 120%;
+  border: 1px solid #ddd; /* 枠線を追加 */
+  border-radius: 5px; 
+  box-sizing: border-box; /* 枠線を含んだサイズとして設定 */
+}
+
+.store_name input[type="text"]{
+  margin-bottom: 10px;
+  width: 80%; 
+  font-size: 120%;
+  background-color: #333399;
+  color: white;
+}
+
+.reviewpost input[type="submit"]{
+  background-color: #333399;
+  color: white;
+}
+
+.store_name input[type="text"]:read-only {
+  cursor: not-allowed;  /*カーソルを許可されていない状態に設定 */
+}
+
+.reviewpost input[type="submit"]:hover {
+  /* ボタンのホバースタイル */
+  background-color: #4b4bad;
+}
+
+.body textarea {
+  /* テキストエリアの高さを調整 */
+  height: 150px;
+}
+
+.footer{
+  margin: 0 auto; 
+  text-align: center;
+  font-weight: bold; 
+  font-size: 120%;
+  margin-top: 10px;
+  margin-bottom: 50px; 
+  color: #333399;
+  border-radius: 5px; /* ボタンの角を丸くする */
+  cursor: pointer; /* マウスカーソルをポインターに変更 */
+  width: 80%; /* ボタンの幅を画面の80%に指定 */
+}
+.footer:hover{
+  background-color: #DCDCDC; 
+}
+
+/*map.showのスタイル*/
+.content__review p{
+  color: #333399;
+  font-size: 120%;
+  margin-top: 20px;
+  margin-bottom: 13px;
+}
+
+.edit a{
+  display: inline-block;
+  font-size: 100%;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  background-color: #333399; /* ボタンの背景色 */
+  color: white; /* ボタンのテキスト色 */
+  padding: 0.8%  9%; /* ボタンの内側の余白 */
+  border: none; /*ボタンの枠線をなくす*/
+  border-radius: 5px; /* ボタンの角を丸くする */
+  cursor: pointer; /* マウスカーソルをポインターに変更 */
 }
 
 /*map.search.jsのスタイル*/
-#restaurant
+.strname
 {
   margin: 0 auto; /* 左右の余白を自動で調整して中央に配置 */
   text-align: center; /* コンテンツを中央揃え */
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  padding: 20px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-top: 20px;
+
 }
 
-#restaurants h4 {
+.strname h4 {
   margin: 0 auto;
   text-align: center; 
   border-radius: 15px;
@@ -103,24 +207,24 @@
   font-weight: bold;
 }
 
-#restaurants ul {
+.strname ul {
   margin: 0 auto;
   text-align: center; 
   list-style: none;
   padding: 0;
 }
 
-#restaurants a {
+.strname a {
   margin: 0 auto;
   text-align: center;
   font-size: 110%;
   margin-bottom: 10px;
   text-decoration: none;
-  color: #333399 ; /* リンクの色を設定 */
+ color: #333399 ;  
   font-weight: bold;
 }
 
-#restaurants a:hover {
+.strname a:hover {
   text-decoration: underline;
 }
 

@@ -5,7 +5,7 @@
         </h1>
         <div class ='content'>
             <div class='content__review'>
-                <h3>評価</h3>
+                <h3>レビュー</h3>
                 <p>{{ $review->body }}</p>
             </div>
             <div class="edit"><a href="/reviews/{{ $review->id }}/edit">投稿を編集</a></div>
