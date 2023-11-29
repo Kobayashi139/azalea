@@ -12,6 +12,9 @@
         <div id="restaurants">
      
         <div class ='reviews'>
+            <div class="title1">
+                <h2>レビュー</h2>
+            </div>
             @foreach ($reviews as $review)
                 @if ($review->store_name  === $name)
                 <div class='review'>
@@ -24,23 +27,24 @@
             @endforeach
         </div>
         
-        <h3>レビュー作成</h3>
+        <div class="title2">
+            <h3>レビュー作成</h3>
+        </div>
         <form action="/reviews" method="POST">
-            @csrf
-            <div class="store_name">
-                <h3>店名</h3>
-                <input type="text" name="review[store_name]" placeholder="お店の名前" value="{{ $name }}" readonly/> 
-                <p class="title_error" style="color:red">{{ $errors->first('review.store_name') }}</p>
+            <div class="reviewpost">
+                @csrf
+                <div class="store_name">
+                    <input type="text" name="review[store_name]" value="{{ $name }}" readonly/> 
+                    <p class="title_error" style="color:red">{{ $errors->first('review.store_name') }}</p>
+                </div>
+                <div class="body">
+                    <h3>レビューを記入</h3>
+                    <textarea name="review[body]" placeholder="おいしかった！">{{ old('review.body') }}</textarea>
+                    <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
+                </div>
+                <input type="submit" value="保存" />
             </div>
-            <div class="body">
-                <h3>評価</h3>
-                <textarea name="review[body]" placeholder="お店の感想">{{ old('review.body') }}</textarea>
-                <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
-            </div>
-            <input type="submit" value="保存" />
-            <!--保存と同時に画面が移動する原因がわからない、"/"に戻ってしまう-->
         </from>
-        
             <div class="footer">
                <a href="/">戻る</a>
             </div>
