@@ -1,30 +1,27 @@
 <x-app-layout>
     <body class="antialiased">
         <h1>{{ $name }}</h1>
-        <div id="map" style="height:300px; width:500px;"></div>
+        <div id="map"></div>
+        <input type="text" name="adress" value="{{ $name }}" id="address" class=hidden>
+        <button type="button" id="search" class=hidden>検索</button>
+        <div id="lat" class=hidden></div>
+        <div id="lng" class=hidden></div>
         
-            <input type="text" name="adress" value="{{ $name }}" id="address">
-            <button type="button" id="search">検索</button>
- 
-        <div id="lat"></div>
-            <div id="lng"></div>
         <script src="{{ asset('/js/map_search.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>
         <div id="restaurants">
      
-        <x-slot name="text-2"><h2>みんなの声</h2></x-slot>
         <div class ='reviews'>
             @foreach ($reviews as $review)
                 @if ($review->store_name  === $name)
                 <div class='review'>
                     <h2 class='store_name'>
-                        <a href="/maps/show/{{ $review->id }}">{{ $review->body}}</a>
+                        <a href="/maps/show/{{ $review->id }}" >{{ $review->body}}</a>
                         <!-- データベース内のstore_nameを表示-->
                     </h2>
                 </div>
                 @endif
             @endforeach
-
         </div>
         
         <h3>レビュー作成</h3>
@@ -41,7 +38,7 @@
                 <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
             </div>
             <input type="submit" value="保存" />
-            <!--保存と同時にこの画面に推移する方法がわからない、初めに戻ってしまう-->
+            <!--保存と同時に画面が移動する原因がわからない、"/"に戻ってしまう-->
         </from>
         
             <div class="footer">

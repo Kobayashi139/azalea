@@ -81,7 +81,7 @@ function searchNearbyRestaurants(lat, lng) {
 
     placesService.nearbySearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-            var restaurantList = '<h2>Nearby Restaurants:</h2><ul>';
+            var restaurantList = '<h4>周辺の飲食店</h4><ul>';
             for (var i = 0; i < results.length; i++) {
                 var restaurant = results[i];
                 restaurantList += '<a href="/reviews/create/' + restaurant.name + '" >' + restaurant.name + '</a><br>';
@@ -90,7 +90,7 @@ function searchNearbyRestaurants(lat, lng) {
             restaurantList += '</ul>';
             document.getElementById('restaurants').innerHTML = restaurantList;
         } else {
-            document.getElementById('restaurants').innerHTML = '<h2>No nearby restaurants found.</h2>';
+            document.getElementById('restaurants').innerHTML = '<h2>指定された区域の飲食店が見つかりませんでした</h2>';
         }
     });
 }

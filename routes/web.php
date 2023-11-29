@@ -26,7 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [ReviewController::class, 'review'])->name('maps.map');
     Route::get('/reviews/create/{name}',[ReviewController::class, 'create']);
     Route::get('/maps/show/{review}',[ReviewController::class , 'show']);
+    //Route::post('/reviews/create/{name}',[ReviewController::class , 'store']);
     Route::post('/reviews',[ReviewController::class, 'store']);
+    
     Route::get('/reviews/{review}/edit',[ReviewController::class, 'edit']);
     Route::put('/reviews/{review}',[ReviewController::class, 'update']);
     
