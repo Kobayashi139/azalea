@@ -34,7 +34,6 @@
             
             <main>
                 <div style="">
-                    <!--<div class="text-center"> -->
                     {{ $slot }}
                     </div>
                 </div>

@@ -59,6 +59,11 @@ class ReviewController extends Controller
     public function edit(Review $review)
     {
         return view('maps.edit')->with(['review' => $review]);
+        // $url = url()->previous();
+        // $input = $request['review'];
+        // $review->fill($input)->save(); //前回取得したURLをもう一度表示する
+        // return redirect($url);
+        
     }
     
     public function update(ReviewRequest $request, Review $review)

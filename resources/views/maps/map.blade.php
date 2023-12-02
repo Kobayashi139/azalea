@@ -11,8 +11,9 @@
     <div id="lat" class=hidden></div>
     <div id="lng" class=hidden></div>
     <script src="{{ asset('/js/map_search.js') }}"></script>
-    <!--<script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&callback=initMap" async defer></script>-->
     <div class="strname" id="restaurants">
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDec7mudcnoMhynGZbFhZAefE85sce6_NQ&libraries=places&callback=initMap" async defer></script>
+    <div class="blank"></div>
+
 </x-app-layout>

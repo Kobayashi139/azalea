@@ -15,14 +15,12 @@
                     <textarea name="review[body]" placeholder="お店の感想">{{ $review->body}}</textarea>
                     <p class="title_error" style="color:red">{{ $errors->first('review.body') }}</p>
                 </div>
-                <div class="sibmit2">
-                    <input type="submit" value="保存"/>
-                </div>
+                <input type="submit" value="保存"/>
             </form>
             <div class="footer">
-                <!--今なんか戻れない-->
-                <a href="/review/create/{{ $review->store_name }}">戻る</a>
+                <a href="/maps/show/{{ $review->id}}">戻る</a>
             </div>
+            <div class="blank"></div>
         </div>
     </body>
 </x-app-layout>
