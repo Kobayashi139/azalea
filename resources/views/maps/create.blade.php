@@ -48,6 +48,7 @@
             <div class="footer">
                <a href="/">戻る</a>
             </div>
+            <div class="blank"></div>
         </div>
     </body>
 </x-app-layout>

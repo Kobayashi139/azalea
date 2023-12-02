@@ -35,7 +35,6 @@
             <main>
                 <!--nazo-->
                 <div style="">
-                    <!--<div class="text-center"> -->
                     {{ $slot }}
                     </div>
                 </div>
